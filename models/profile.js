@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
 
       Profile.hasMany(models.Game, {
         as: 'gamesOwned',
-        foreignKey: 'profileId',
+        foreignKey: 'owner',
       })
     }
   }
