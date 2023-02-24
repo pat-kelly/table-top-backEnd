@@ -9,6 +9,8 @@ const { decodeUserFromToken, checkAuth } = middleware;
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken);
 router.post('/', checkAuth, gamesCtrl.create);
+router.get('/', checkAuth, gamesCtrl.index);
+router.delete('/', checkAuth, gamesCtrl.delGame);
 
 
 module.exports = router;

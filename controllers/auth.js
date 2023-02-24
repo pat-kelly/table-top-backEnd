@@ -39,6 +39,7 @@ async function login(req, res) {
     user.comparePassword(req.body.password, (err, isMatch) => {
       if (isMatch) {
         const token = createJWT(user)
+        console.log(token);
         res.json({ token })
       } else {
         res.status(401).json({ err: 'Incorrect password' })

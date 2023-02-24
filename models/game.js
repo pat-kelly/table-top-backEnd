@@ -38,6 +38,9 @@ module.exports = (sequelize, DataTypes) => {
         model: 'Profiles',
         key: 'id',
       }
+    },
+    photo: {
+      type: DataTypes.STRING,
     }
   }, {
     sequelize,
